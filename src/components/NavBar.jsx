@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import { SiCodingninjas, SiHackthebox, SiIntigriti, SiLeetcode, SiTryhackme } from 'react-icons/si';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,21 @@ export default function Navbar() {
               </a>
               <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
                 <FaLinkedin size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiLeetcode size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiCodingninjas size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiIntigriti size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiHackthebox size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiTryhackme size={20} />
               </a>
             </div>
           </div>
