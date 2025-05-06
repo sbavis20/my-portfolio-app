@@ -96,6 +96,21 @@ export default function Navbar() {
               <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
                 <FaLinkedin size={20} />
               </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiLeetcode size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiCodingninjas size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiIntigriti size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiHackthebox size={20} />
+              </a>
+              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+                <SiTryhackme size={20} />
+              </a>
             </div>
           </div>
         </div>

@@ -35,3 +35,13 @@
   animation:
     blink-caret 0.75s step-end infinite;
 }
+
+/* Ensure proper video sizing */
+.aspect-video {
+  aspect-ratio: 16/9;
+}
+
+/* Smooth transitions */
+video {
+  transition: all 0.3s ease;
+}

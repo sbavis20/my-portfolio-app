@@ -10,9 +10,7 @@ export default function App() {
     {/* Main content - MUST be first sibling after navbar */}
     <main className="pt-16"> {/* pt-16 matches navbar height */}
       <Header />
-      <section className="py-8">
-        {/* page content */}
-      </section>
+
     </main>
   </div>
   );

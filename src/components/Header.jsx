@@ -21,7 +21,21 @@ export default function Header() {
             Cyber Security Analyst
           </p>
 
+          </div>
+
+ {/* Video - right side */}
+ <div className="absolute right-0 top-0 w-1/2 h-full">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/video/video_12.mp4" type="video/mp4" />
+          </video>
         </div>
+
       </div>
     );
   }
