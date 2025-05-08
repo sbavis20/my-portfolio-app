@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Experience from './components/Experience';
+import Education from './components/Education';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +32,13 @@ export default function App() {
       <section id="experience" className="min-h-screen bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Experience />
+        </div>
+      </section>
+
+          {/* Education Section */}
+          <section id="education" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Education />
         </div>
       </section>
     </div>
