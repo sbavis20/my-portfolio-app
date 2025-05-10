@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import Skills from './components/Skills';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,6 +40,13 @@ export default function App() {
           <section id="education" className="min-h-screen bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Education />
+        </div>
+      </section>
+
+         {/* Skills Section */}
+          <section id="skills" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Skills />
         </div>
       </section>
     </div>
