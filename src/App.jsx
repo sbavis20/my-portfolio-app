@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import Oneko from "./components/Oneko"; // ✅ import the new component
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Experience from './components/Experience';
@@ -20,9 +20,11 @@ export default function App() {
 
   return (
     <div className="bg-gray-900 text-white">
+        <Oneko /> {/* 🐾 This will start the Oneko animation */}
       {/* Floating Navbar */}
       <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <Navbar />
+
       </div>
 
       {/* Header Section - Full viewport height */}
