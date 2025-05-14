@@ -1,116 +1,108 @@
+import { FiCode, FiShield, FiTool, FiServer, FiCpu, FiLock } from 'react-icons/fi';
+
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Programming & Scripting",
-      icon: "💻",
+      title: "Programming & Development",
+      icon: <FiCode className="text-blue-500" size={20} />,
       skills: [
-        { name: "Python", icon: "🐍", tags: ["OOP", "Automation", "Tool Dev"] },
-        { name: "C++", icon: "➕", tags: ["DSA", "System Programming"] },
-        { name: "Bash", icon: "🐚", tags: ["CLI", "Automation"] },
-        { name: "JavaScript", icon: "📜", tags: ["Web Security", "Node.js"] }
+        { name: "Python", tags: ["Automation", "Tool Development"] },
+        { name: "C++", tags: ["System Programming", "DSA"] },
+        { name: "Bash Scripting", tags: ["CLI Tools", "Automation"] },
+        { name: "JavaScript", tags: ["Web Security", "Node.js"] }
       ]
     },
     {
-      title: "Penetration Testing",
-      icon: "🔓",
+      title: "Offensive Security",
+      icon: <FiShield className="text-red-500" size={20} />,
       skills: [
-        { name: "Web App Testing", icon: "🕸️", tags: ["OWASP Top 10", "APIs"] },
-        { name: "Network Pentesting", icon: "📡", tags: ["Protocols", "Traffic Analysis"] },
-        { name: "Cloud Security", icon: "☁️", tags: ["AWS", "Azure", "GCP"] },
-        { name: "Red Teaming", icon: "🟥", tags: ["Lateral Movement", "Persistence"] }
+        { name: "Web App Pentesting", tags: ["OWASP Top 10", "API Security"] },
+        { name: "Network Pentesting", tags: ["Protocol Analysis", "Traffic Inspection"] },
+        { name: "Cloud Security", tags: ["AWS", "Azure", "GCP"] },
+        { name: "Red Teaming", tags: ["Adversary Simulation"] }
       ]
     },
     {
       title: "Security Tools",
-      icon: "🛠️",
+      icon: <FiTool className="text-green-500" size={20} />,
       skills: [
-        { name: "Burp Suite", icon: "🔍", tags: ["Extensions", "Scanner"] },
-        { name: "Metasploit", icon: "💣", tags: ["Exploits", "Post-Exploit"] },
-        { name: "Wireshark", icon: "👁️", tags: ["PCAP", "Decryption"] },
-        { name: "Nmap", icon: "🗺️", tags: ["Scanning", "Scripting"] }
+        { name: "Burp Suite Pro", tags: ["Advanced Scanning"] },
+        { name: "Metasploit Framework", tags: ["Exploit Development"] },
+        { name: "Wireshark", tags: ["Packet Analysis"] },
+        { name: "Nmap", tags: ["Network Discovery"] }
       ]
     },
     {
       title: "Defensive Security",
-      icon: "🛡️",
+      icon: <FiLock className="text-purple-500" size={20} />,
       skills: [
-        { name: "SIEM", icon: "📊", tags: ["Splunk", "QRadar"] },
-        { name: "IDS/IPS", icon: "🚨", tags: ["Snort", "Suricata"] },
-        { name: "Firewalls", icon: "🔥", tags: ["pfSense", "iptables"] },
-        { name: "EDR", icon: "🖥️", tags: ["CrowdStrike", "Defender"] }
+        { name: "SIEM Solutions", tags: ["Splunk", "QRadar"] },
+        { name: "IDS/IPS", tags: ["Snort", "Suricata"] },
+        { name: "Firewalls", tags: ["pfSense", "iptables"] },
+        { name: "EDR Solutions", tags: ["CrowdStrike", "Defender ATP"] }
       ]
     }
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-900 text-white">
+    <section id="skills" className="py-16 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-2 text-center text-green-300">
-          Technical Arsenal
-        </h2>
-        <p className="text-xl font-medium mb-12 text-center text-gray-300">
-          Tools & Technologies I Work With
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-green-400 mb-2">Technical Expertise</h2>
+          <p className="text-lg text-gray-400">Professional skills across security domains</p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-800/50 border border-gray-700 rounded-xl p-5 hover:border-green-400/50 transition-all"
+              className="bg-gray-800/50 border border-gray-700 rounded-lg hover:border-green-400/30 transition-all"
             >
-              <div className="flex items-center mb-4">
-                <span className="text-2xl mr-3">{category.icon}</span>
-                <h3 className="text-xl font-bold">{category.title}</h3>
+              <div className="p-5 border-b border-gray-700 flex items-center">
+                <div className="mr-3 p-2 bg-gray-700 rounded-lg">
+                  {category.icon}
+                </div>
+                <h3 className="font-medium">{category.title}</h3>
               </div>
-
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="flex items-start group">
-                    <span className="text-2xl mr-3 mt-1 group-hover:text-green-300 transition-colors">
-                      {skill.icon}
-                    </span>
-                    <div>
-                      <h4 className="font-medium">{skill.name}</h4>
-                      <div className="flex flex-wrap gap-1.5 mt-1">
+              <div className="p-5">
+                <ul className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <li key={skillIndex}>
+                      <h4 className="font-medium text-gray-100">{skill.name}</h4>
+                      <div className="flex flex-wrap gap-2 mt-1">
                         {skill.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="text-xs bg-gray-700/70 px-2 py-0.5 rounded-full border border-gray-600"
+                            className="text-xs bg-gray-700/80 text-gray-300 px-2 py-1 rounded"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Additional Tools Section */}
+        {/* Additional Technologies */}
         <div className="mt-16">
-          <h3 className="text-xl font-bold text-center mb-6 text-green-300">
-            Additional Tools & Platforms
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-medium text-gray-300">Additional Technologies</h3>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {[
-              { name: "Kali Linux", icon: "🐉" },
-              { name: "Ubuntu", icon: "🐧" },
-              { name: "Windows Security", icon: "🪟" },
-              { name: "Docker", icon: "🐳" },
-              { name: "Git", icon: "📌" },
-              { name: "SQLmap", icon: "🗃️" },
-              { name: "Nessus", icon: "🔎" },
-              { name: "Zeek", icon: "👀" }
+              "Kali Linux", "Ubuntu Server", "Windows Defender",
+              "Docker", "Git", "SQLmap", "Nessus", "Zeek",
+              "BloodHound", "Impacket", "PowerShell", "Ansible"
             ].map((tool, index) => (
               <div
                 key={index}
-                className="flex items-center bg-gray-800/40 px-4 py-2 rounded-full border border-gray-700 hover:border-green-300/50 transition-colors"
+                className="px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 text-sm hover:bg-gray-700/50 transition-colors"
               >
-                <span className="mr-2">{tool.icon}</span>
-                <span>{tool.name}</span>
+                {tool}
               </div>
             ))}
           </div>
