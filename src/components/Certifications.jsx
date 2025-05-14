@@ -1,118 +1,106 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { FaShieldAlt, FaUserSecret, FaDatabase, FaTrophy, FaCode, FaCertificate } from 'react-icons/fa';
 
 export default function Certifications() {
   const certifications = [
     {
-      title: "Certified Information Security and Ethical Hacking (CISEH)",
+      title: "CISEH",
+      fullName: "Certified Information Security and Ethical Hacking",
       issuer: "EC-Council",
       date: "2024",
-      image: "/certs/ciseh.jpg",
-      icon: "🛡️"
+      icon: <FaShieldAlt className="text-green-400" />,
+      category: "Security"
     },
     {
-      title: "Certified Penetration Testing Expert (CPTE)",
+      title: "CPTE",
+      fullName: "Certified Penetration Testing Expert",
       issuer: "Mile2 Security",
       date: "2023",
-      image: "/certs/cpte.jpg",
-      icon: "🔓"
+      icon: <FaUserSecret className="text-blue-400" />,
+      category: "Offensive Security"
     },
     {
-      title: "Big Data Certification",
+      title: "Big Data",
+      fullName: "Big Data Certification",
       issuer: "Global Technologies",
       date: "2023",
-      image: "/certs/bigdata.jpg",
-      icon: "📊"
+      icon: <FaDatabase className="text-purple-400" />,
+      category: "Data"
     },
     {
-      title: "Cyber-Disease Ethical Hacking",
-      issuer: "National Competition",
+      title: "Cyber-Disease",
+      fullName: "Ethical Hacking Competition",
+      issuer: "National Level",
       date: "2023",
-      image: "/certs/cyber-disease.jpg",
-      icon: "🏆"
+      icon: <FaTrophy className="text-yellow-400" />,
+      category: "Competition"
     },
     {
-      title: "Mathematics for AI",
+      title: "Math for AI",
+      fullName: "Mathematics for Artificial Intelligence",
       issuer: "Academic Program",
       date: "2023",
-      image: "/certs/math-ai.jpg",
-      icon: "🧮"
+      icon: <FaCode className="text-red-400" />,
+      category: "Academic"
     },
     {
-      title: "JavaScript Bootcamp",
+      title: "JS Bootcamp",
+      fullName: "JavaScript Certification",
       issuer: "Lets Upgrade",
       date: "2022",
-      image: "/certs/js-bootcamp.jpg",
-      icon: "📜"
+      icon: <FaCertificate className="text-cyan-400" />,
+      category: "Programming"
+    },
+    {
+      title: "JS Bootcamp",
+      fullName: "JavaScript Certification",
+      issuer: "Lets Upgrade",
+      date: "2022",
+      icon: <FaCertificate className="text-cyan-400" />,
+      category: "Programming"
     }
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-gray-800 text-white">
+    <section id="certifications" className="py-16 bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-2 text-center text-green-300">
-          Certifications
-        </h2>
-        <p className="text-xl font-medium mb-12 text-center text-gray-300">
-          Validated Security Expertise
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-green-300 mb-2">Certifications</h2>
+          <p className="text-xl text-gray-300">Validated expertise across multiple domains</p>
+        </div>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-          }}
-          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
-          pagination={{ clickable: true }}
-          loop={true}
-          className="pb-12"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-gray-900/70 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-green-400/50 transition-all h-full flex flex-col">
-                {/* Certification Image */}
-                <div className="h-48 overflow-hidden relative">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
-                  <span className="absolute top-4 right-4 text-3xl bg-gray-900/80 p-2 rounded-lg">
-                    {cert.icon}
-                  </span>
+            <div
+              key={index}
+              className="bg-gray-900/50 border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all hover:shadow-lg hover:shadow-green-400/10"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-3xl p-3 bg-gray-800 rounded-lg">
+                  {cert.icon}
                 </div>
-
-                {/* Certification Details */}
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
-                  <div className="mt-auto">
-                    <div className="flex justify-between text-sm text-gray-400 mb-3">
-                      <span>Issued by: <span className="text-gray-300">{cert.issuer}</span></span>
-                      <span>Year: <span className="text-gray-300">{cert.date}</span></span>
+                <div>
+                  <h3 className="text-xl font-bold">{cert.title}</h3>
+                  <p className="text-sm text-gray-400">{cert.fullName}</p>
+                  <div className="mt-4 pt-4 border-t border-gray-700 flex justify-between">
+                    <div>
+                      <p className="text-xs text-gray-500">Issued by</p>
+                      <p className="text-sm">{cert.issuer}</p>
                     </div>
-                    <button className="w-full py-2 bg-green-600/20 hover:bg-green-600/30 border border-green-400/50 rounded-lg text-green-300 transition-colors flex items-center justify-center">
-                      View Credential
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </button>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500">Completed</p>
+                      <p className="text-sm">{cert.date}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </div>
 
-        {/* Verification Note */}
-        <div className="text-center mt-8 text-sm text-gray-400">
-          <p>All certifications are verifiable through official channels</p>
+        <div className="mt-12 text-center">
+          <button className="px-6 py-2 bg-green-600/20 hover:bg-green-600/30 border border-green-400/50 rounded-lg text-green-300 transition-colors">
+            View All Credentials
+          </button>
         </div>
       </div>
     </section>
