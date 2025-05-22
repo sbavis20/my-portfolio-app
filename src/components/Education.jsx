@@ -1,58 +1,87 @@
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 import nitclogo from "/imgs/nitc_logo.png";
 import suplogo from "/imgs/SUP_logo.png";
-import educationLottie from "/imgs/book.json"; // Replace with your actual path
+import educationLottie from "/imgs/book.json";
+
+const educationData = [
+  {
+    institute: "NIT Calicut",
+    logo: nitclogo,
+    course: "M.Tech in Computer Science & Information Security",
+    years: "2022 - 2024",
+    cgpa: "8.06",
+    degree: "MTech",
+    highlights: [
+      "Specialized in Cybersecurity Research",
+      "Thesis on AI-Driven Threat Detection"
+    ]
+  },
+  {
+    institute: "Pune University",
+    logo: suplogo,
+    course: "B.Tech in Computer Science Engineering",
+    years: "2015 - 2019",
+    cgpa: "7.33",
+    degree: "BTech",
+    highlights: [
+      "Final Project on Secure Auth Systems",
+      "Core CS Fundamentals"
+    ]
+  }
+];
 
 export default function Education() {
   return (
-    <section id="education" className="py-20 bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-2 text-center text-green-300">Education</h2>
-        <h3 className="text-xl font-medium mb-12 text-center text-gray-400">Academic Background</h3>
+    <section id="education" className="py-20 bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <Lottie animationData={educationLottie} loop={true} />
+      </div>
 
-        <div className="flex flex-col lg:flex-row items-start gap-12">
-          {/* Timeline Section */}
-          <div className="relative border-l border-green-400/30 pl-6 lg:w-1/2">
-            {/* NIT Calicut */}
-            <div className="mb-12 relative pl-6">
-              <div className="absolute -left-3 top-1 w-5 h-5 bg-green-400 rounded-full border-2 border-white"></div>
-              <div className="flex flex-col md:flex-row md:items-center gap-6">
-                <img src={nitclogo} alt="NITC Logo" className="w-16 h-16 rounded-full border border-green-500 shadow-lg" />
-                <div>
-                  <h4 className="text-xl font-bold text-white">National Institute of Technology Calicut</h4>
-                  <p className="text-green-300 font-medium">Master of Technology</p>
-                  <p className="text-gray-300 text-sm">August 2022 – September 2024</p>
-                  <div className="mt-2 text-gray-300 space-y-1">
-                    <p><span className="font-semibold">Major:</span> Computer Science and Information Security</p>
-                    <p><span className="font-semibold">Minor:</span> Information Security</p>
-                    <p><span className="font-semibold">CGPA:</span> 8.06</p>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-500 mb-3">
+            Academic Journey
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-emerald-600 mx-auto"></div>
+        </div>
+
+        <div className="border-l-2 border-emerald-600 pl-6 space-y-12">
+          {educationData.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative"
+            >
+              <div className="absolute -left-[13px] w-6 h-6 rounded-full bg-emerald-500 border-4 border-gray-950"></div>
+              <div className="bg-gray-800/70 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-emerald-500/30 transition-all backdrop-blur">
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <img
+                      src={edu.logo}
+                      alt={edu.institute}
+                      className="w-16 h-16 rounded-lg border border-gray-600 bg-white p-1 object-contain shadow-md"
+                    />
+                    <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-xs font-bold px-2 py-1 rounded-full">
+                      {edu.degree}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{edu.institute}</h3>
+                    <p className="text-emerald-300 text-sm mt-1">{edu.course}</p>
+                    <p className="text-gray-400 text-sm mt-1">{edu.years} | CGPA: {edu.cgpa}</p>
                   </div>
                 </div>
+                <ul className="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
+                  {edu.highlights.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
-
-            {/* Pune University */}
-            <div className="mb-4 relative pl-6">
-              <div className="absolute -left-3 top-1 w-5 h-5 bg-green-400 rounded-full border-2 border-white"></div>
-              <div className="flex flex-col md:flex-row md:items-center gap-6">
-                <img src={suplogo} alt="SPPU Logo" className="w-16 h-16 rounded-full border border-green-500 shadow-lg" />
-                <div>
-                  <h4 className="text-xl font-bold text-white">Savitribai Phule Pune University</h4>
-                  <p className="text-green-300 font-medium">Bachelor of Technology</p>
-                  <p className="text-gray-300 text-sm">August 2015 – June 2019</p>
-                  <div className="mt-2 text-gray-300 space-y-1">
-                    <p><span className="font-semibold">Major:</span> Computer Science and Engineering</p>
-                    <p><span className="font-semibold">CGPA:</span> 7.33</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Lottie Animation Right */}
-          <div className="lg:w-1/2 w-full">
-            <Lottie animationData={educationLottie} loop={true} className="w-full max-h-[400px]" />
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
