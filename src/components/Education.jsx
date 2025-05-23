@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
-import { motion } from "framer-motion";
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 import nitclogo from "/imgs/nitc_logo.png";
 import suplogo from "/imgs/SUP_logo.png";
 import educationLottie from "/imgs/book.json";
@@ -46,43 +47,81 @@ export default function Education() {
           <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-emerald-600 mx-auto"></div>
         </div>
 
-        <div className="border-l-2 border-emerald-600 pl-6 space-y-12">
+        <VerticalTimeline
+          lineColor="#10c453"
+          layout="1-column-left"
+          className="vertical-timeline-custom-line"
+        >
           {educationData.map((edu, index) => (
-            <motion.div
+            <VerticalTimelineElement
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative"
-            >
-              <div className="absolute -left-[13px] w-6 h-6 rounded-full bg-emerald-500 border-4 border-gray-950"></div>
-              <div className="bg-gray-800/70 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-emerald-500/30 transition-all backdrop-blur">
-                <div className="flex items-center gap-4">
-                  <div className="relative">
-                    <img
-                      src={edu.logo}
-                      alt={edu.institute}
-                      className="w-16 h-16 rounded-lg border border-gray-600 bg-white p-1 object-contain shadow-md"
-                    />
-                    <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-xs font-bold px-2 py-1 rounded-full">
-                      {edu.degree}
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{edu.institute}</h3>
-                    <p className="text-emerald-300 text-sm mt-1">{edu.course}</p>
-                    <p className="text-gray-400 text-sm mt-1">{edu.years} | CGPA: {edu.cgpa}</p>
-                  </div>
+              className="vertical-timeline-element--education"
+              contentStyle={{
+                background: 'rgba(31, 41, 55, 0.7)',
+                color: '#fff',
+                border: '1px solid rgba(16, 196, 83, 0.3)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 4px 20px rgba(16, 196, 83, 0.15)',
+                borderRadius: '12px'
+              }}
+              contentArrowStyle={{
+                borderRight: '7px solid rgba(31, 41, 55, 0.7)'
+              }}
+              date={edu.years}
+              dateClassName="text-emerald-300"
+              iconStyle={{
+                background: '#10c453',
+                boxShadow: '0 0 0 4px rgba(16, 196, 83, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+              icon={
+                <div className="w-full h-full flex items-center justify-center p-1">
+                  <img
+                    src={edu.logo}
+                    alt={edu.institute}
+                    className="w-full h-full object-contain bg-white rounded-sm p-0.5"
+                  />
                 </div>
-                <ul className="mt-4 list-disc list-inside text-gray-300 text-sm space-y-1">
+              }
+            >
+              <div className="flex flex-col space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{edu.institute}</h3>
+                    <p className="text-emerald-300 text-sm">{edu.course}</p>
+                  </div>
+                  <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2 py-1 rounded-full">
+                    {edu.degree}
+                  </span>
+                </div>
+
+                <div className="flex items-center text-sm text-gray-300">
+                  <span className="mr-2">CGPA: {edu.cgpa}</span>
+                </div>
+
+                <ul className="mt-2 space-y-1.5">
                   {edu.highlights.map((point, i) => (
-                    <li key={i}>{point}</li>
+                    <li key={i} className="flex items-start">
+                      <span className="text-emerald-400 mr-2">•</span>
+                      <span className="text-gray-300 text-sm">{point}</span>
+                    </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </VerticalTimelineElement>
           ))}
-        </div>
+
+          <VerticalTimelineElement
+            iconStyle={{
+              background: '#10c453',
+              color: '#fff',
+              boxShadow: '0 0 0 4px rgba(16, 196, 83, 0.3)'
+            }}
+            iconClassName="hover:scale-110 transition-transform"
+            />
+        </VerticalTimeline>
       </div>
     </section>
   );
