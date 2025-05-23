@@ -1,9 +1,8 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaShieldAlt, FaFlask, FaLaptopCode } from 'react-icons/fa';
-import { MdWork } from 'react-icons/md';
+import { FaShieldAlt, FaUserSecret, FaLaptopCode } from 'react-icons/fa';
 
-export default function ExperienceTimeline() {
+export default function Experience() {
   return (
     <section id="experience" className="py-20 bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,50 +13,138 @@ export default function ExperienceTimeline() {
           Security Expertise Timeline
         </h3>
 
-        <VerticalTimeline>
+        <VerticalTimeline layout="1-column-left" lineColor="#10b981">
+          {/* Current Position */}
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            contentStyle={{ background: 'rgb(16, 185, 129)', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid rgb(16, 185, 129)' }}
-            date="May 2025 – Present"
-            iconStyle={{ background: 'rgb(16, 185, 129)', color: '#fff' }}
-            icon={<MdWork />}
-          >
-            <h3 className="vertical-timeline-element-title font-bold text-white">Cyber Security Analyst</h3>
-            <h4 className="vertical-timeline-element-subtitle text-white">KrtrimaIQ Cognitive Solutions</h4>
-            <ul className="list-disc pl-5 mt-3 space-y-2 text-white">
-              <li><strong>Pentesting Leadership:</strong> Identified 50+ critical vulnerabilities and conducted 15+ assessments</li>
-              <li><strong>Threat Detection:</strong> Reduced response time by 35%, developed 20+ detection signatures</li>
-              <li><strong>Security Tools:</strong> Splunk, Burp Suite, Wireshark, Metasploit, Snort</li>
-            </ul>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="Jan 2025 – Apr 2025"
-            iconStyle={{ background: 'rgb(34, 197, 94)', color: '#fff' }}
+            contentStyle={{
+              background: 'rgba(17, 24, 39, 0.7)',
+              borderTop: '4px solid #10b981',
+              boxShadow: '0 4px 20px rgba(16, 185, 129, 0.15)',
+              backdropFilter: 'blur(8px)'
+            }}
+            contentArrowStyle={{ borderRight: '7px solid rgba(17, 24, 39, 0.7)' }}
+            date="MAY 2025 – Present"
+            dateClassName="text-green-300"
+            iconStyle={{ background: '#10b981', color: '#fff' }}
             icon={<FaShieldAlt />}
           >
-            <h3 className="vertical-timeline-element-title font-bold text-white">Security Engineer (Contract)</h3>
-            <h4 className="vertical-timeline-element-subtitle text-white">KrtrimaIQ</h4>
-            <ul className="list-disc pl-5 mt-3 space-y-2 text-white">
-              <li><strong>Automation:</strong> Implemented automated vulnerability scanning saving 60% time</li>
-              <li><strong>Team Exercises:</strong> Led purple team exercises enhancing detection</li>
-            </ul>
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="text-xl font-bold text-white">KrtrimaIQ Cognitive Solutions</h3>
+                <h4 className="text-lg font-semibold text-green-300">Cyber Security Analyst</h4>
+              </div>
+              <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">
+                Current Role
+              </span>
+            </div>
+
+            <div className="mt-4 space-y-4">
+              <div>
+                <h5 className="font-bold text-gray-100">Pentesting Leadership</h5>
+                <ul className="mt-1 ml-4 space-y-1 text-gray-300">
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Identified 50+ critical vulnerabilities across web/AI systems
+                  </li>
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Conducted 15+ comprehensive security assessments
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-bold text-gray-100">Threat Detection</h5>
+                <ul className="mt-1 ml-4 space-y-1 text-gray-300">
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Reduced incident response time by 35% with custom SIEM rules
+                  </li>
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Developed 20+ detection signatures for emerging threats
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h5 className="font-bold text-gray-100">Security Tools</h5>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {['Splunk', 'Burp Suite', 'Wireshark', 'Metasploit', 'Snort'].map(tool => (
+                    <span key={tool} className="bg-gray-700 px-2 py-1 rounded text-xs">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </VerticalTimelineElement>
 
+          {/* Contract Position */}
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: 'rgba(17, 24, 39, 0.7)',
+              borderTop: '4px solid #3b82f6',
+              boxShadow: '0 4px 20px rgba(59, 130, 246, 0.15)',
+              backdropFilter: 'blur(8px)'
+            }}
+            contentArrowStyle={{ borderRight: '7px solid rgba(17, 24, 39, 0.7)' }}
+            date="JAN 2025 – APR 2025"
+            dateClassName="text-blue-300"
+            iconStyle={{ background: '#3b82f6', color: '#fff' }}
+            icon={<FaUserSecret />}
+          >
+            <h3 className="text-xl font-bold text-white">KrtrimaIQ Cognitive Solutions</h3>
+            <h4 className="text-lg font-semibold text-blue-300">Security Engineer (Contract)</h4>
+
+            <div className="mt-4 space-y-4">
+              <div>
+                <h5 className="font-bold text-gray-100">Automation</h5>
+                <p className="text-gray-300 mt-1">
+                  Automated vulnerability scanning pipeline (60% time savings)
+                </p>
+              </div>
+
+              <div>
+                <h5 className="font-bold text-gray-100">Team Exercises</h5>
+                <p className="text-gray-300 mt-1">
+                  Conducted purple team exercises improving detection rates
+                </p>
+              </div>
+            </div>
+          </VerticalTimelineElement>
+
+          {/* Research Position */}
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
+            contentStyle={{
+              background: 'rgba(17, 24, 39, 0.7)',
+              borderTop: '4px solid #8b5cf6',
+              boxShadow: '0 4px 20px rgba(139, 92, 246, 0.15)',
+              backdropFilter: 'blur(8px)'
+            }}
+            contentArrowStyle={{ borderRight: '7px solid rgba(17, 24, 39, 0.7)' }}
             date="2023 – 2024"
-            iconStyle={{ background: 'rgb(236, 72, 153)', color: '#fff' }}
-            icon={<FaFlask />}
+            dateClassName="text-purple-300"
+            iconStyle={{ background: '#8b5cf6', color: '#fff' }}
+            icon={<FaLaptopCode />}
           >
-            <h3 className="vertical-timeline-element-title font-bold text-white">Security Researcher</h3>
-            <h4 className="vertical-timeline-element-subtitle text-white">NITC Research</h4>
-            <ul className="list-disc pl-5 mt-3 space-y-2 text-white">
-              <li><strong>Research:</strong> Published ML-based anomaly detection paper (98% accuracy)</li>
-              <li><strong>Development:</strong> Created custom IDS rules for zero-day threat detection</li>
-            </ul>
+            <h3 className="text-xl font-bold text-white">NITC Research</h3>
+            <h4 className="text-lg font-semibold text-purple-300">Security Researcher</h4>
+
+            <div className="mt-4 space-y-4">
+              <div>
+                <h5 className="font-bold text-gray-100">Research</h5>
+                <p className="text-gray-300 mt-1">
+                  Published paper on ML-based anomaly detection (98% accuracy)
+                </p>
+              </div>
+
+              <div>
+                <h5 className="font-bold text-gray-100">Development</h5>
+                <p className="text-gray-300 mt-1">
+                  Developed custom IDS rules detecting zero-day patterns
+                </p>
+              </div>
+            </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
