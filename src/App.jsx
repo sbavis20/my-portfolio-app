@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
-import Oneko from "./components/Oneko"; // ✅ import the new component
+import Oneko from "./components/Oneko";
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
+
 import Certifications from './components/Certifications';
+
+import Projects from './components/Projects';
+
+
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -53,7 +58,14 @@ export default function App() {
         </div>
       </section>
 
-       {/* Certifications Section */}
+          {/* Projects Section */}
+          <section id="proj" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Projects />
+        </div>
+      </section>
+
+        {/* Certifications Section */}
           <section id="certi" className="min-h-screen bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Certifications />
