@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
 import Oneko from "./components/Oneko";
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
-
 import Certifications from './components/Certifications';
-
 import Projects from './components/Projects';
-
+import About from './components/About';
 
 
 export default function App() {
@@ -71,6 +69,14 @@ export default function App() {
           <Certifications />
         </div>
       </section>
+
+      {/* About Section */}
+          <section id="about" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <About />
+        </div>
+      </section>
+
     </div>
   );
 }
