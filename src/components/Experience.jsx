@@ -41,26 +41,44 @@ export default function Experience() {
 
             <div className="mt-4 space-y-4">
               <div>
-                <h5 className="font-bold text-gray-100">Pentesting Leadership</h5>
+                <h5 className="font-bold text-gray-100">Application & AI Security</h5>
                 <ul className="mt-1 ml-4 space-y-1 text-gray-300">
                   <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
-                    Identified 50+ critical vulnerabilities across web/AI systems
+                   Conducted penetration tests on web apps and AI systems, uncovering critical vulnerabilities (SQLi, XSS, CSRF, IDOR, RCE) and guiding remediation thus improving security posture by 67%.
                   </li>
                   <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
-                    Conducted 15+ comprehensive security assessments
+                    Executed firewalls,IDS/IPS and Endpoint Security solutions to reduce malicious attacks by 79%.
+                  </li>
+                   <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Performed manual code reviews (Python, JavaScript) and automated scans (Burp, OWASP ZAP) to identify security flaws in development pipelines.
+                  </li>
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Led phishing simulations using GoPhish, improving employee awareness and reducing click rates by 45%.
+                  </li>
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Directed a team to execute system hardening strategies, promoting a 55% increase in incident response efficiency.
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h5 className="font-bold text-gray-100">Threat Detection</h5>
+                <h5 className="font-bold text-gray-100">Network & Compliance</h5>
                 <ul className="mt-1 ml-4 space-y-1 text-gray-300">
                   <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
-                    Reduced incident response time by 35% with custom SIEM rules
+                    Analyzed network traffic (Wireshark, Nmap) to detect anomalies and harden infrastructure.
                   </li>
                   <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
-                    Developed 20+ detection signatures for emerging threats
+                    Ensured compliance with DPDPA 2023 and CERT-IN guidelines for data protection.
                   </li>
+                </ul>
+              </div>
+                 <div>
+                <h5 className="font-bold text-gray-100">Endpoint & Container Security</h5>
+                <ul className="mt-1 ml-4 space-y-1 text-gray-300">
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                      Engineered Docker sandbox environments to safely analyze malicious code (e.g., detonating suspicious scripts in isolated containers).                  </li>
+                  <li className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-green-400 before:rounded-full">
+                    Automated security policies for containerized workloads (e.g., enforcing read-only filesystems, seccomp profiles).                  </li>
                 </ul>
               </div>
 
