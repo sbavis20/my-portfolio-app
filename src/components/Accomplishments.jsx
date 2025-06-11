@@ -38,6 +38,7 @@ const ResearchAchievements = () => {
   ];
 
   return (
+ <section id="accomplishments" className="py-20 bg-gray-800">
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -90,7 +91,7 @@ const ResearchAchievements = () => {
 
 
       </div>
-    </div>
+    </div></section>
   );
 };
 

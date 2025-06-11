@@ -50,7 +50,7 @@ const Research = () => {
 
   return (
     <section
-      id="research"
+      id="publications"
       className="py-20 bg-gradient-to-b from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-700 text-white min-h-[600px]"
       itemScope
       itemType="http://schema.org/ItemList"
