@@ -146,20 +146,23 @@ export default function Experience() {
             icon={<FaLaptopCode />}
           >
             <h3 className="text-xl font-bold text-white">NITC Research</h3>
-            <h4 className="text-lg font-semibold text-purple-300">Security Researcher</h4>
+            <h4 className="text-lg font-semibold text-purple-300">Teaching Assistant</h4>
 
             <div className="mt-4 space-y-4">
               <div>
-                <h5 className="font-bold text-gray-100">Research</h5>
+                <h5 className="font-bold text-gray-100">Cybersecurity Lab</h5>
                 <p className="text-gray-300 mt-1">
-                  Published paper on ML-based anomaly detection (98% accuracy)
+                  Designed hands-on labs for vulnerability assessment (WebGoat, bWAPP) and secure coding practices.
+                </p>
+                   <p className="text-gray-300 mt-1">
+                  Configured Snort IDS, pfSense firewalls, and Zeek for network monitoring.
                 </p>
               </div>
 
               <div>
-                <h5 className="font-bold text-gray-100">Development</h5>
+                <h5 className="font-bold text-gray-100">Machine Learning & Security Research</h5>
                 <p className="text-gray-300 mt-1">
-                  Developed custom IDS rules detecting zero-day patterns
+                  Researched ML-driven intrusion detection using PCA, SVM, and clustering (K-means).
                 </p>
               </div>
             </div>
