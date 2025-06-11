@@ -111,13 +111,16 @@ export default function Experience() {
             icon={<FaUserSecret />}
           >
             <h3 className="text-xl font-bold text-white">KrtrimaIQ Cognitive Solutions</h3>
-            <h4 className="text-lg font-semibold text-blue-300">Security Engineer (Contract)</h4>
+            <h4 className="text-lg font-semibold text-blue-300">Cyber Security Analyst (Contract)</h4>
 
             <div className="mt-4 space-y-4">
               <div>
                 <h5 className="font-bold text-gray-100">Automation</h5>
                 <p className="text-gray-300 mt-1">
-                  Automated vulnerability scanning pipeline (60% time savings)
+                  Automated vulnerability scanning pipeline, reducing response time by 30%.
+                 </p>
+                  <p className="text-gray-300 mt-1">
+                  Applied advanced vulnerability scanning tools to correlate incident data, assess threat impact, and prioritize resolution, improving threat detection efficiency by 40%.
                 </p>
               </div>
 
@@ -126,7 +129,21 @@ export default function Experience() {
                 <p className="text-gray-300 mt-1">
                   Conducted purple team exercises improving detection rates
                 </p>
+               <p className="text-gray-300 mt-1">
+                Delivered ongoing security awareness and incident response training, enhancing security maturity across internal teams.
+                </p>
               </div>
+
+     <div>
+                <h5 className="font-bold text-gray-100">Network</h5>
+                <p className="text-gray-300 mt-1">
+                  Conducted purple team exercises improving detection rates
+                </p>
+               <p className="text-gray-300 mt-1">
+                Provided consultation on the secure integration of VPN technologies into Android features, ensuring encrypted and private user connectivity.
+                </p>
+              </div>
+
             </div>
           </VerticalTimelineElement>
 
