@@ -8,7 +8,8 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Projects from './components/Projects';
 import About from './components/About';
-
+import Accomplishments from './components/Accomplishments';
+import Publications from './components/Publications';
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,6 +68,21 @@ export default function App() {
           <section id="certi" className="min-h-screen bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Certifications />
+        </div>
+      </section>
+
+              {/* Accomplishments Section */}
+          <section id="accom" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Accomplishments />
+        </div>
+      </section>
+
+
+              {/* Publications Section */}
+          <section id="publ" className="min-h-screen bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Publications />
         </div>
       </section>
 
