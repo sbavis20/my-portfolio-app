@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaLock, FaCode, FaNetworkWired, FaCha
 import { useSpring, animated, useTrail } from '@react-spring/web';
 import Tooltip from '@mui/material/Tooltip';
 import Zoom from '@mui/material/Zoom';
-
+import profilepic from "../assets/imgs/profile-pic.jpg";
 const About = () => {
   // Animation for profile photo
   const photoSpring = useSpring({
@@ -72,7 +72,7 @@ const About = () => {
           >
             <div className="relative rounded-full overflow-hidden border-4 border-cyan-400/50 p-1 bg-gray-800/30 backdrop-blur-sm transition-all duration-300 group-hover:border-cyan-400 group-hover:shadow-cyan-400/20">
               <img
-                src="/imgs/profile-pic.jpg" // Replace with your image path
+                src={profilepic}
                 alt="Profile Photo"
                 className="w-full h-full object-cover rounded-full"
               />

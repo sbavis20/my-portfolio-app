@@ -1,9 +1,9 @@
 import Lottie from "lottie-react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import nitclogo from "/imgs/nitc_logo.png";
-import suplogo from "/imgs/SUP_logo.png";
-import educationLottie from "/imgs/book.json";
+import nitclogo from "../assets/imgs/nitc_logo.png";
+import suplogo from "../assets/imgs/SUP_logo.png";
+import educationLottie from "../assets/imgs/book.json";
 
 const educationData = [
   {

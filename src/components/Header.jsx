@@ -1,3 +1,4 @@
+import video from "../assets/video/video_12.mp4";
 export default function Header() {
     return (
       <div className="inset-0 bg-gray-900 text-white pt-16 p-6 sm:p-8 md:p-12">
@@ -32,7 +33,7 @@ export default function Header() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/video/video_12.mp4" type="video/mp4" />
+            <source src={video} type="video/mp4" />
           </video>
         </div>
 

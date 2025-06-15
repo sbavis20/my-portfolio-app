@@ -41,25 +41,25 @@ export default function Navbar() {
           {/* Social Icons (Desktop) */}
           <div className="hidden md:block">
             <div className="flex space-x-4">
-              <a href="https://github.com" className="text-gray-300 hover:text-white">
+              <a href="https://github.com/sbavis20" className="text-gray-300 hover:text-white">
                 <FaGithub size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://www.linkedin.com/in/swapnil-vishwas-baviskar-bbb536214/" className="text-gray-300 hover:text-white">
                 <FaLinkedin size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://leetcode.com/u/sawamura02/" className="text-gray-300 hover:text-white">
                 <SiLeetcode size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://www.naukri.com/code360/profile/sawamura" className="text-gray-300 hover:text-white">
                 <SiCodingninjas size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://app.intigriti.com/researcher/profile/sawamura02" className="text-gray-300 hover:text-white">
                 <SiIntigriti size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://www.hackthebox.com/" className="text-gray-300 hover:text-white">
                 <SiHackthebox size={20} />
               </a>
-              <a href="https://linkedin.com" className="text-gray-300 hover:text-white">
+              <a href="https://tryhackme.com/" className="text-gray-300 hover:text-white">
                 <SiTryhackme size={20} />
               </a>
             </div>
