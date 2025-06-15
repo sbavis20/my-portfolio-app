@@ -3,45 +3,75 @@ import { FiCode, FiShield, FiTool, FiServer, FiCpu, FiLock } from 'react-icons/f
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Programming & Development",
+      title: "Programming & Development (2+ years)",
       icon: <FiCode className="text-blue-500" size={20} />,
       skills: [
-        { name: "Python", tags: ["Automation", "Tool Development"] },
-        { name: "C++", tags: ["System Programming", "DSA"] },
-        { name: "Bash Scripting", tags: ["CLI Tools", "Automation"] },
-        { name: "JavaScript", tags: ["Web Security", "Node.js"] }
+        { name: "Python", tags: ["Tooling", "Scripting", "Flask APIs", "Security Automation"] },
+        { name: "C++", tags: ["System Programming", "Performance Optimization"] },
+        { name: "Bash Scripting", tags: ["DevOps Automation", "System Monitoring"] },
+        { name: "JavaScript", tags: ["Node.js", "Client-side Validation"] },
+        { name: "Flask", tags: ["Secure Backend APIs", "Code Evaluation Server"] }
       ]
     },
     {
-      title: "Offensive Security",
+      title: "Offensive Security (2+ years)",
       icon: <FiShield className="text-red-500" size={20} />,
       skills: [
-        { name: "Web App Pentesting", tags: ["OWASP Top 10", "API Security"] },
-        { name: "Network Pentesting", tags: ["Protocol Analysis", "Traffic Inspection"] },
-        { name: "Cloud Security", tags: ["AWS", "Azure", "GCP"] },
-        { name: "Red Teaming", tags: ["Adversary Simulation"] }
+        { name: "Web App Pentesting", tags: ["OWASP Top 10", "Auth Bypass", "Custom Exploit Scripting"] },
+        { name: "Network Pentesting", tags: ["MITM Attacks", "Protocol Analysis"] },
+        { name: "Cloud Security", tags: ["AWS IAM Misconfigurations", "GCP Pentesting"] },
+        { name: "Red Teaming", tags: ["Adversary Simulation", "Vulnerability Assessment"] },
+        { name: "Secure Code Engine Dev", tags: ["Live Evaluation Sandbox", "Flask", "SecComp Filters"] }
       ]
     },
     {
-      title: "Security Tools",
+      title: "Security Tools (2+ years)",
       icon: <FiTool className="text-green-500" size={20} />,
       skills: [
-        { name: "Burp Suite Pro", tags: ["Advanced Scanning"] },
-        { name: "Metasploit Framework", tags: ["Exploit Development"] },
-        { name: "Wireshark", tags: ["Packet Analysis"] },
-        { name: "Nmap", tags: ["Network Discovery"] }
+        { name: "Burp Suite Pro", tags: ["Custom Scanning Profiles", "Intruder Payloads"] },
+        { name: "Metasploit Framework", tags: ["Post-Exploitation", "Payload Customization"] },
+        { name: "Wireshark", tags: ["Protocol Dissection", "Traffic Anomalies"] },
+        { name: "Nmap", tags: ["Port Scanning", "Service Fingerprinting"] },
+        { name: "SQLMap",tags:["Wxploiting SQL injection flaws"]},
+        { name: "Nessus", tags: ["Security  Scanning", "Discovers any vulnerabilities "] },
       ]
     },
     {
-      title: "Defensive Security",
+      title: "Defensive Security (2+ years)",
       icon: <FiLock className="text-purple-500" size={20} />,
       skills: [
-        { name: "SIEM Solutions", tags: ["Splunk", "QRadar"] },
-        { name: "IDS/IPS", tags: ["Snort", "Suricata"] },
-        { name: "Firewalls", tags: ["pfSense", "iptables"] },
-        { name: "EDR Solutions", tags: ["CrowdStrike", "Defender ATP"] }
+        { name: "IDS/IPS", tags: ["Snort Rules", "Suricata Alerts"] },
+        { name: "Firewalls", tags: ["pfSense Config", "iptables Hardening"] }
       ]
-    }
+    },
+    {
+      title: "Cloud (1+ years)",
+      icon: <FiLock className="text-purple-500" size={20} />,
+      skills: [
+        { name: "AWS", tags: ["IAM"] },
+        { name: "GCP", tags: ["pfSense Google Cloud Security Command Center"] }
+      ]
+    },
+{
+  title: "Operating Systems (3+ years)",
+  icon: <FiLock className="text-purple-500" size={20} />,
+  skills: [
+    { name: "Windows 11", tags: ["User Access Control", "Active Directory", "Defender for Endpoint"] },
+    { name: "Ubuntu", tags: ["System Hardening", "Firewall (UFW)", "Server Hosting on GCP"] },
+    { name: "Kali Linux", tags: ["Offensive Toolset", "Red Team Ops", "GCP Security Command Center"] }
+  ]
+},
+{
+  title: "Data Structures & Algorithms (1.5+ years)",
+  icon: <FiCpu className="text-yellow-400" size={20} />,
+  skills: [
+    { name: "C++", tags: ["OOPs", "STL", "Time & Space Optimization"] },
+    { name: "Problem Solving", tags: ["LeetCode", "Codeforces", "Competitive Programming"] },
+    { name: "Algorithms", tags: ["Greedy", "DP", "Graph Theory", "Backtracking"] }
+  ]
+}
+
+
   ];
 
   return (
@@ -49,7 +79,7 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-green-400 mb-2">Technical Expertise</h2>
-          <p className="text-lg text-gray-400">Professional skills across security domains</p>
+          <p className="text-lg text-gray-400">Expertise built through real-world projects and offensive security research</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -94,10 +124,21 @@ export default function Skills() {
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {[
-              "Kali Linux", "Ubuntu Server", "Windows Defender",
-              "Docker", "Git", "SQLmap", "Nessus", "Zeek",
-              "BloodHound", "Impacket", "PowerShell", "Ansible"
-            ].map((tool, index) => (
+  "Docker",              // Containerization for app deployment
+  "Git",                 // Version control and collaboration
+  "PowerShell",          // Scripting for Windows automation
+  "Linux Shell",         // Bash & CLI utilities
+  "Visual Studio Code",  // Lightweight coding and debugging
+  "GitHub Actions",      // CI/CD for automation workflows
+  "Makefile",            // Task automation and build management
+  "tmux",                // Terminal multiplexing for efficiency
+  "Netcat",              // Network debugging & exploitation
+  "curl / wget",         // Web request tools for testing
+  "Vim",                 // Terminal-based code editing
+  "GDB",                 // Debugging low-level C/C++ programs
+  "Terraform",           // IaC for secure infrastructure (cloud)
+  "Cloud SDK (gcloud / aws-cli)" // Cloud infrastructure automation
+].map((tool, index) => (
               <div
                 key={index}
                 className="px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 text-sm hover:bg-gray-700/50 transition-colors"
