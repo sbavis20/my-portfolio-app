@@ -7,16 +7,19 @@ import educationLottie from "/imgs/book.json";
 
 const educationData = [
   {
-    institute: "NIT Calicut",
+    institute: "National Institute of Technology Calicut",
     logo: nitclogo,
     course: "M.Tech in Computer Science & Information Security",
     years: "2022 - 2024",
     cgpa: "8.06",
     degree: "MTech",
-    highlights: [
-      "Specialized in Cybersecurity Research",
-      "Thesis on AI-Driven Threat Detection"
-    ]
+      highlights: [
+        "Completed advanced coursework in: Foundations of Information Security, Cryptography, Advanced DBMS, Algorithms, Artificial Intelligence",
+        "Explored Free and Open Source Software (FOSS) and Mathematics for AI for practical and theoretical insights",
+        "Hands-on projects integrating AI with cybersecurity applications",
+        "Strong analytical foundation through rigorous algorithm design and problem-solving training",
+        "Keen interest in securing cloud and high-performance computing systems"
+      ]
   },
   {
     institute: "Pune University",
@@ -25,10 +28,12 @@ const educationData = [
     years: "2015 - 2019",
     cgpa: "7.33",
     degree: "BTech",
-    highlights: [
-      "Final Project on Secure Auth Systems",
-      "Core CS Fundamentals"
-    ]
+      highlights: [
+        "Core subjects mastered: Engineering Mathematics, Digital Logic, COA, Programming & Data Structures, Algorithms, TOC, Compiler Design, OS, DBMS, and Computer Networks",
+        "Extensive exposure to system-level concepts and low-level programming",
+        "Participated in multiple hands-on workshops on Cybersecurity and Ethical Hacking",
+        "Strong foundation in both theoretical computer science and practical system design"
+      ]
   }
 ];
 
